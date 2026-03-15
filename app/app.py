@@ -1,10 +1,14 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import os
 
 # Load model and saved feature list
-model = joblib.load("../models/house_price_model.pkl")
-features = joblib.load("../models/model_features.pkl")
+current_dir = os.path.dirname(__file__)
+model_path = os.path.join(current_dir,"..","models","house_price_model.pkl")
+features_path = os.path.join(current_dir,"..","model_features.pkl")
+model = joblib.load(model_path)
+features = joblib.load(features_path)
 
 st.title("🏠 House Price Predictor")
 
