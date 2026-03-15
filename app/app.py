@@ -6,7 +6,7 @@ import os
 # Load model and saved feature list
 current_dir = os.path.dirname(__file__)
 model_path = os.path.join(current_dir,"..","models","house_price_model.pkl")
-features_path = os.path.join(current_dir,"..","model_features.pkl")
+features_path = os.path.join(current_dir,"..","models","model_features.pkl")
 model = joblib.load(model_path)
 features = joblib.load(features_path)
 
